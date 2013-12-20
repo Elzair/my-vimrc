@@ -41,7 +41,7 @@ noremap <leader>_ dd P
 " Add binding to swap current character with next
 noremap <leader>= xp 
 " Add binding to go to end of line in insert mode
-inoremap <D-e> <esc>$i
+inoremap <D-e> <esc>$a
 " Add bindings to convert selected word to uppercase
 noremap <c-u> bviwU<esc>e
 inoremap <c-u> <esc>bviwU<esc>ea
