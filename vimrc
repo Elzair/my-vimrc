@@ -34,12 +34,14 @@ imap ii <Esc>
 " Set leader & local leader
 let mapleader = "-"
 let maplocalleader = "\\"
-" Make - swap current line with next
+" Add binding to swap current line with next
 noremap <leader>- dd p
-" Make _ swap current line with previous
+" Add binding to swap current line with previous
 noremap <leader>_ dd P
-" Make = swap current character with next
+" Add binding to swap current character with next
 noremap <leader>= xp 
+" Add binding to go to end of line in insert mode
+inoremap <D-e> <esc>$i
 " Add bindings to convert selected word to uppercase
 noremap <c-u> bviwU<esc>e
 inoremap <c-u> <esc>bviwU<esc>ea
