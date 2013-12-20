@@ -38,6 +38,8 @@ let maplocalleader = "\\"
 noremap <leader>- dd p
 " Make _ swap current line with previous
 noremap <leader>_ dd P
+" Make = swap current character with next
+noremap <leader>= xp 
 " Add bindings to convert selected word to uppercase
 noremap <c-u> bviwU<esc>e
 inoremap <c-u> <esc>bviwU<esc>ea
