@@ -43,7 +43,7 @@ noremap <leader>= xp
 " Add binding to go to end of line in insert mode
 inoremap <D-e> <esc>$a
 " Add binding to go right one character in insert mode
-inoremap <D-r> <esc>a
+inoremap <D-r> <esc>la
 " Add bindings to convert selected word to uppercase
 noremap <c-u> bviwU<esc>e
 inoremap <c-u> <esc>bviwU<esc>ea
