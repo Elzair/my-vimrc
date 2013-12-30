@@ -208,6 +208,17 @@ augroup filetype_php
   autocmd FileType php setlocal softtabstop=2
   autocmd FileType php setlocal number
   autocmd FileType php setlocal ruler
+  autocmd FileType php nnoremap <buffer> <localleader>c ^I//<esc>
+  autocmd FileType php vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
+  autocmd FileType php inoremap <buffer> iff if () {<cr>}<esc>k$2hi
+  autocmd FileType php inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
+  autocmd FileType php inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
+  autocmd FileType php inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
+  autocmd FileType php inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
+  autocmd FileType php inoremap  <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType php inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
+  autocmd FileType php inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
+  autocmd FileType php inoremap <buffer> class class  {<cr>}<esc>k$2hi
 augroup END  
 " }}}
 " Markdown {{{
