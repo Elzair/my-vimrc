@@ -219,6 +219,12 @@ augroup filetype_php
   autocmd FileType php inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
   autocmd FileType php inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
   autocmd FileType php inoremap <buffer> class class  {<cr>}<esc>k$2hi
+  " Add support for automatically adding brackets
+  autocmd FileType javascript inoremap <buffer> ( ()<esc>i
+  autocmd FileType javascript inoremap <buffer> { {}<esc>i
+  autocmd FileType javascript inoremap <buffer> [ []<esc>i
+  autocmd FileType javascript inoremap <buffer> ' ''<esc>i
+  autocmd FileType javascript inoremap <buffer> " ""<esc>i
 augroup END  
 " }}}
 " Markdown {{{
