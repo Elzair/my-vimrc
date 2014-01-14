@@ -120,7 +120,7 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
   autocmd FileType javascript inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
   autocmd FileType javascript inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
-  autocmd FileType javascript inoremap  <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType javascript inoremap <buffer> eelse else {<cr>}<esc>O
   autocmd FileType javascript inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> tc try {<cr>}<cr>catch (e) {<cr>}<esc>2kO
@@ -215,16 +215,43 @@ augroup filetype_php
   autocmd FileType php inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
   autocmd FileType php inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
   autocmd FileType php inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
-  autocmd FileType php inoremap  <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType php inoremap <buffer> eelse else {<cr>}<esc>O
   autocmd FileType php inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
   autocmd FileType php inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
-  autocmd FileType php inoremap <buffer> class class  {<cr>}<esc>k$2hi
+  autocmd FileType php inoremap <buffer> cclass class  {<cr>}<esc>k$2hi
   " Add support for automatically adding brackets
   autocmd FileType javascript inoremap <buffer> ( ()<esc>i
   autocmd FileType javascript inoremap <buffer> { {}<esc>i
   autocmd FileType javascript inoremap <buffer> [ []<esc>i
   autocmd FileType javascript inoremap <buffer> ' ''<esc>i
   autocmd FileType javascript inoremap <buffer> " ""<esc>i
+augroup END  
+" }}}
+" Ruby -------------------------- {{{
+  autocmd!
+  autocmd FileType ruby set omnifunc=rubycomplete#CompleteRuby
+  autocmd FileType ruby setlocal expandtab
+  autocmd FileType ruby setlocal shiftwidth=2
+  autocmd FileType ruby setlocal softtabstop=2
+  autocmd FileType ruby setlocal number
+  autocmd FileType ruby setlocal ruler
+  autocmd FileType ruby nnoremap <buffer> <localleader>c ^I//<esc>
+  autocmd FileType ruby vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
+  autocmd FileType ruby inoremap <buffer> iff if () {<cr>}<esc>k$2hi
+  autocmd FileType ruby inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
+  autocmd FileType ruby inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
+  autocmd FileType ruby inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
+  autocmd FileType ruby inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
+  autocmd FileType ruby inoremap <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType ruby inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
+  autocmd FileType ruby inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
+  autocmd FileType ruby inoremap <buffer> cclass class  {<cr>}<esc>k$2hi
+  " Add support for automatically adding brackets
+  autocmd FileType ruby inoremap <buffer> ( ()<esc>i
+  autocmd FileType ruby inoremap <buffer> { {}<esc>i
+  autocmd FileType ruby inoremap <buffer> [ []<esc>i
+  autocmd FileType ruby inoremap <buffer> ' ''<esc>i
+  autocmd FileType ruby inoremap <buffer> " ""<esc>i
 augroup END  
 " }}}
 " Markdown {{{
