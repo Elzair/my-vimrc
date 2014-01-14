@@ -243,8 +243,9 @@ augroup END
   autocmd FileType ruby,eruby inoremap <buffer> ifelse if <cr>else <cr>end<esc>2k$a
   autocmd FileType ruby,eruby inoremap <buffer> ifeiel if <cr>elsif <cr>else <cr>end<esc>3k$a
   autocmd FileType ruby,eruby inoremap <buffer> eelse else <cr><Tab>
-  autocmd FileType ruby,eruby inoremap <buffer> ffor for  in <cr>end<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> ffor for  in <cr>end<esc>k$3hi
   autocmd FileType ruby,eruby inoremap <buffer> wwhile while <cr>end<esc>k$a
+  autocmd FileType ruby,eruby inoremap <buffer> uunles unless <cr>end<esc>k$a
   autocmd FileType ruby,eruby inoremap <buffer> cclass class <cr>end<esc>k$a
   autocmd FileType ruby,eruby inoremap <buffer> cfun def <cr>end<esc>k$a
   autocmd FileType ruby,eruby inoremap <buffer> mmod module <cr>end<esc>k$a
