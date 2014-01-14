@@ -229,29 +229,34 @@ augroup END
 " }}}
 " Ruby -------------------------- {{{
   autocmd!
-  autocmd FileType ruby set omnifunc=rubycomplete#CompleteRuby
-  autocmd FileType ruby setlocal expandtab
-  autocmd FileType ruby setlocal shiftwidth=2
-  autocmd FileType ruby setlocal softtabstop=2
-  autocmd FileType ruby setlocal number
-  autocmd FileType ruby setlocal ruler
-  autocmd FileType ruby nnoremap <buffer> <localleader>c ^I//<esc>
-  autocmd FileType ruby vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
-  autocmd FileType ruby inoremap <buffer> iff if () {<cr>}<esc>k$2hi
-  autocmd FileType ruby inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
-  autocmd FileType ruby inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
-  autocmd FileType ruby inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
-  autocmd FileType ruby inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
-  autocmd FileType ruby inoremap <buffer> eelse else {<cr>}<esc>O
-  autocmd FileType ruby inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
-  autocmd FileType ruby inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
-  autocmd FileType ruby inoremap <buffer> cclass class  {<cr>}<esc>k$2hi
+  " autocmd FileType ruby,eruby set omnifunc=ruby,erubycomplete#CompleteRuby
+  autocmd FileType ruby,eruby setlocal expandtab
+  autocmd FileType ruby,eruby setlocal shiftwidth=2
+  autocmd FileType ruby,eruby setlocal softtabstop=2
+  autocmd FileType ruby,eruby setlocal number
+  autocmd FileType ruby,eruby setlocal ruler
+  autocmd FileType ruby,eruby nnoremap <buffer> <localleader>c ^I//<esc>
+  autocmd FileType ruby,eruby vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
+  autocmd FileType ruby,eruby inoremap <buffer> iff if () {<cr>}<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType ruby,eruby inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> cclass class  {<cr>}<esc>k$2hi
   " Add support for automatically adding brackets
-  autocmd FileType ruby inoremap <buffer> ( ()<esc>i
-  autocmd FileType ruby inoremap <buffer> { {}<esc>i
-  autocmd FileType ruby inoremap <buffer> [ []<esc>i
-  autocmd FileType ruby inoremap <buffer> ' ''<esc>i
-  autocmd FileType ruby inoremap <buffer> " ""<esc>i
+  autocmd FileType ruby,eruby inoremap <buffer> ( ()<esc>i
+  autocmd FileType ruby,eruby inoremap <buffer> { {}<esc>i
+  autocmd FileType ruby,eruby inoremap <buffer> [ []<esc>i
+  autocmd FileType ruby,eruby inoremap <buffer> ' ''<esc>i
+  autocmd FileType ruby,eruby inoremap <buffer> " ""<esc>i
+  " Autocompletion options
+  autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+  autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+  autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
 augroup END  
 " }}}
 " Markdown {{{
