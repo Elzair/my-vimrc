@@ -237,15 +237,17 @@ augroup END
   autocmd FileType ruby,eruby setlocal ruler
   autocmd FileType ruby,eruby nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType ruby,eruby vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
-  autocmd FileType ruby,eruby inoremap <buffer> iff if () {<cr>}<esc>k$2hi
-  autocmd FileType ruby,eruby inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
-  autocmd FileType ruby,eruby inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
-  autocmd FileType ruby,eruby inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
-  autocmd FileType ruby,eruby inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
-  autocmd FileType ruby,eruby inoremap <buffer> eelse else {<cr>}<esc>O
-  autocmd FileType ruby,eruby inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
-  autocmd FileType ruby,eruby inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
-  autocmd FileType ruby,eruby inoremap <buffer> cclass class  {<cr>}<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> iff if <cr>end<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> elif elsif <cr>end<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> ifelif if <cr>elsif <cr>end<esc>2k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> ifelse if <cr>else <cr>end<esc>2k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> ifeiel if <cr>elsif <cr>else <cr>end<esc>3k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> eelse else <cr><Tab>
+  autocmd FileType ruby,eruby inoremap <buffer> ffor for  in <cr>end<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> wwhile while () {<cr>}<esc>k$3hi
+  autocmd FileType ruby,eruby inoremap <buffer> cclass class  <cr>end<esc>k$hi
+  autocmd FileType ruby,eruby inoremap <buffer> cfun def  <cr>end<esc>k$hi
+  autocmd FileType ruby,eruby inoremap <buffer> mmod module  <cr>end<esc>k$hi
   " Add support for automatically adding brackets
   autocmd FileType ruby,eruby inoremap <buffer> ( ()<esc>i
   autocmd FileType ruby,eruby inoremap <buffer> { {}<esc>i
