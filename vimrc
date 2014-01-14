@@ -237,7 +237,7 @@ augroup END
   autocmd FileType ruby,eruby setlocal ruler
   autocmd FileType ruby,eruby nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType ruby,eruby vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
-  autocmd FileType ruby,eruby inoremap <buffer> iff if <cr>end<esc>k$2hi
+  autocmd FileType ruby,eruby inoremap <buffer> iff if  <cr>end<esc>k$hi
   autocmd FileType ruby,eruby inoremap <buffer> elif elsif <cr>end<esc>k$2hi
   autocmd FileType ruby,eruby inoremap <buffer> ifelif if <cr>elsif <cr>end<esc>2k$2hi
   autocmd FileType ruby,eruby inoremap <buffer> ifelse if <cr>else <cr>end<esc>2k$2hi
