@@ -101,8 +101,6 @@ vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 vnoremap <Left> <nop>
 vnoremap <Right> <nop>
-" Add command to write a file with sudo permissions
-command W w !sudo tee % > /dev/null
 " }}}
 " Settings for Specific Files {{{
 " Javascript {{{
