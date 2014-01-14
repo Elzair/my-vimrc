@@ -289,18 +289,26 @@ augroup END
 let g:neocomplcache_enable_at_startup=1
 map <C-F6> :ctags -R --exclude=bin --exclude=.git .<CR>
 map <F8> :TagbarToggle<CR>
-function! SuperCleverTab()
-    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'    
-      return "\<Tab>"
+" function! SuperCleverTab()
+"     if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'    
+"       return "\<Tab>"
+"   else
+"     if &omnifunc != ''
+"       return "\<C-X>\<C-O>"
+"     elseif &dictionary != ''
+"       return "\<C-N>"
+"     endif
+"   endif
+" endfunction
+" inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
   else
-    if &omnifunc != ''
-      return "\<C-X>\<C-O>"
-    elseif &dictionary != ''
-      return "\<C-N>"
-    endif
+    return "\<Tab>"
   endif
 endfunction
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 let g:easytags_cmd = '/usr/local/bin/ctags'
 let g:easytags_file = '~/.vimtags'
 " }}}
