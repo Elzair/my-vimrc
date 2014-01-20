@@ -23,6 +23,8 @@ colorscheme solarized
 set mouse=a
 " Start NERDTree on startup
 autocmd vimenter * if !argc() | NERDTree | endif
+" Start NERDTree on new tab
+autocmd TabEnter * :NERDTreeMirror
 " }}}
 " General Mappings ------------- {{{
 " Enable scroll wheel support
