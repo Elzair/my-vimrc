@@ -22,9 +22,13 @@ colorscheme solarized
 " Enable focus follows mouse
 set mouse=a
 " Start NERDTree on startup
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
+let g:nerdtree_tabs_open_on_gui_startup=1
 " Start NERDTree on new tab
-autocmd TabEnter * :NERDTreeMirror
+"autocmd TabEnter * :NERDTreeMirror
+let g:nerdtree_tabs_open_on_new_tab=1
+" Synchronize view of all NERDTree windows in all tabs
+let g:nerdtree_tabs_synchronize_view=1
 " }}}
 " General Mappings ------------- {{{
 " Enable scroll wheel support
