@@ -1,8 +1,43 @@
 " Basic settings ------------------- {{{
 " Install Pathogen
-execute pathogen#infect()
+"execute pathogen#infect()
 " Disable vi compatibility
 set nocompatible
+" Vundle ---------------- {{{
+" Install vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+" List other bundles here
+Bundle 'vim-scripts/LanguageTool'
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'Shougo/neocomplcache'
+Bundle 'scrooloose/nerdtree'
+Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-bundler'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'hiukkanen/vim-hamlc'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'jakar/vim-json'
+Bundle 'lunaru/vim-less'
+Bundle 'Elzair/vim-line-numbers'
+Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'tpope/vim-markdown'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'myhere/vim-nodejs-complete'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'wavded/vim-stylus'
+Bundle 'sjl/vitality.vim'
+Bundle 'mattn/zencoding'
+" }}}
 " Enable syntax highlighting
 syntax on
 " Enable filetype detection
@@ -296,18 +331,6 @@ augroup END
 let g:neocomplcache_enable_at_startup=1
 map <C-F6> :ctags -R --exclude=bin --exclude=.git .<CR>
 map <F8> :TagbarToggle<CR>
-" function! SuperCleverTab()
-"     if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'    
-"       return "\<Tab>"
-"   else
-"     if &omnifunc != ''
-"       return "\<C-X>\<C-O>"
-"     elseif &dictionary != ''
-"       return "\<C-N>"
-"     endif
-"   endif
-" endfunction
-" inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
     return "\<C-N>"
