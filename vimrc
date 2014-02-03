@@ -36,7 +36,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'wavded/vim-stylus'
 Bundle 'sjl/vitality.vim'
-Bundle 'mattn/zencoding'
+Bundle 'mattn/emmet-vim'
 " }}}
 " Enable syntax highlighting
 syntax on
