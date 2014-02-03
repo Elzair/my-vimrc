@@ -39,9 +39,9 @@ Bundle 'mattn/emmet-vim'
 " Enable syntax highlighting
 syntax on
 " Enable filetype detection
-if has("autocmd")
-  filetype plugin indent on
-endif
+" if has("autocmd")
+filetype plugin indent on
+" endif
 " Set grammar rules
 let g:languagetool_jar='/usr/local/Cellar/languagetool/2.3/libexec/languagetool-commandline.jar'
 " Set default tab behavior
