@@ -1,6 +1,4 @@
 " Basic settings ------------------- {{{
-" Install Pathogen
-"execute pathogen#infect()
 " Disable vi compatibility
 set nocompatible
 " Vundle ---------------- {{{
@@ -46,6 +44,10 @@ if has("autocmd")
 endif
 " Set grammar rules
 let g:languagetool_jar='/usr/local/Cellar/languagetool/2.3/libexec/languagetool-commandline.jar'
+" Set default tab behavior
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 " Unknown (?)
 set ex
 set secure
@@ -54,14 +56,26 @@ set secure
 " Enable Solarized background
 set background=dark
 colorscheme solarized
-" Enable focus follows mouse
-set mouse=a
-" Start NERDTree on startup
-let g:nerdtree_tabs_open_on_gui_startup=1
-" Start NERDTree on new tab
-let g:nerdtree_tabs_open_on_new_tab=1
-" Synchronize view of all NERDTree windows in all tabs
-let g:nerdtree_tabs_synchronize_view=1
+if has("gui_running")
+  " Set default width & height
+  set lines=32
+  set columns=177
+  " Use Inconsolata font
+  set guifont=Inconsolata:h15
+  " Enable focus follows mouse
+  set mouse=a
+  set mousefocus
+  " Start NERDTree on startup
+  let g:nerdtree_tabs_open_on_gui_startup=1
+  " Start NERDTree on new tab
+  let g:nerdtree_tabs_open_on_new_tab=1
+  " Synchronize view of all NERDTree windows in all tabs
+  let g:nerdtree_tabs_synchronize_view=1
+  " Disabled scrollbars and unnecessary menu
+  set guioptions-=T
+  set guioptions-=L
+  set guioptions-=r
+endif
 " }}}
 " General Mappings ------------- {{{
 " Enable scroll wheel support
