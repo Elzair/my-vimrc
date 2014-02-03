@@ -57,6 +57,7 @@ set secure
 set background=dark
 colorscheme solarized
 if has("gui_running")
+  syntax on
   " Set default width & height
   set lines=32
   set columns=177
