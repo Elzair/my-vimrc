@@ -1,4 +1,4 @@
-" Basic settings ------------------- {{{
+" Basic Settings ------------------- {{{
 " Disable vi compatibility
 set nocompatible
 " Vundle ---------------- {{{
@@ -36,12 +36,10 @@ Bundle 'wavded/vim-stylus'
 Bundle 'sjl/vitality.vim'
 Bundle 'mattn/emmet-vim'
 " }}}
-" Enable syntax highlighting
-syntax on
 " Enable filetype detection
-" if has("autocmd")
-filetype plugin indent on
-" endif
+if has("autocmd")
+  filetype plugin indent on
+endif
 " Set grammar rules
 let g:languagetool_jar='/usr/local/Cellar/languagetool/2.3/libexec/languagetool-commandline.jar'
 " Set default tab behavior
@@ -53,30 +51,7 @@ set ex
 set secure
 " }}}
 " GUI Settings ----------------- {{{
-" Enable Solarized background
-set background=dark
-colorscheme solarized
-if has("gui_running")
-  syntax on
-  " Set default width & height
-  set lines=32
-  set columns=177
-  " Use Inconsolata font
-  set guifont=Inconsolata:h15
-  " Enable focus follows mouse
-  set mouse=a
-  set mousefocus
-  " Start NERDTree on startup
-  let g:nerdtree_tabs_open_on_gui_startup=1
-  " Start NERDTree on new tab
-  let g:nerdtree_tabs_open_on_new_tab=1
-  " Synchronize view of all NERDTree windows in all tabs
-  let g:nerdtree_tabs_synchronize_view=1
-  " Disabled scrollbars and unnecessary menu
-  set guioptions-=T
-  set guioptions-=L
-  set guioptions-=r
-endif
+" See gvimrc
 " }}}
 " General Mappings ------------- {{{
 " Enable scroll wheel support
@@ -101,9 +76,10 @@ inoremap <D-r> <esc>la
 " Add bindings to convert selected word to uppercase
 noremap <c-u> bviwU<esc>e
 inoremap <c-u> <esc>bviwU<esc>ea
-" Add bindings to easily edit and save .vimrc
+" Add bindings to easily edit and save .vimrc & .gvimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>:!cd $HOME/.vim/my-vimrc && cp -f $MYVIMRC vimrc && git commit -a -m 'Modified .vimrc' && git push<CR>
+nnoremap <leader>gv :vsplit $MYGVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>:source $MYGVIMRC<cr>:!cd $HOME/.vim/my-vimrc && cp -f $MYVIMRC vimrc && cp -f $MYGVIMRC gvimrc && git commit -a -m 'Modified .vimrc and/or .gvimrc' && git push<CR>
 " Abbreviations for email, copyright and signature
 iabbrev @@ elzairthesorcerer@gmail.com
 iabbrev ccopy Copyright 2013 Philip Woods, all rights reserved.
