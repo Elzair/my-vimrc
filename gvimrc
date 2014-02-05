@@ -12,7 +12,11 @@ colorscheme solarized
 set lines=32
 set columns=177
 " Use Inconsolata font
-set guifont=Inconsolata:h15
+if has('macunix')
+  set guifont=Inconsolata:h15
+else
+  set guifont=Inconsolata\ 12
+endif
 " Disabled scrollbars and unnecessary menu
 set guioptions-=T
 set guioptions-=L
