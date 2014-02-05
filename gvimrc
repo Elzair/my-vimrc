@@ -9,8 +9,13 @@ syntax on
 set background=dark
 colorscheme solarized
 " Set default width & height
-set lines=32
-set columns=177
+if has('unix')
+  set lines=34
+  set columns=111
+else 
+  set lines=32
+  set columns=177
+endif
 " Use Inconsolata font
 if has('macunix')
   set guifont=Inconsolata:h15
