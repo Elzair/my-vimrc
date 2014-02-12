@@ -35,6 +35,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'wavded/vim-stylus'
 Bundle 'sjl/vitality.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'ekalinin/Dockerfile.vim'
 " }}}
 " Enable filetype detection
 if has("autocmd")
