@@ -10,7 +10,7 @@ set background=dark
 colorscheme solarized
 " Set default width & height
 if has('macunix')
-  set lines=32
+  set lines=26
   set columns=177
 else 
   set lines=26
@@ -40,13 +40,4 @@ let g:nerdtree_tabs_open_on_new_tab=1
 " Synchronize view of all NERDTree windows in all tabs
 let g:nerdtree_tabs_synchronize_view=1
 autocmd vimenter * if !argc() | NERDTree | endif
-" }}}
-" Settings for Specific Files {{{
-" Markdown {{{
-" if has('macunix')
-"   autocmd BufNewFile,BufRead *.md,*.markdown setlocal guifont=DejaVu\ Sans\ Mono:h14
-" else
-"   autocmd BufNewFile,BufRead *.md,*.markdown setlocal guifont=DejaVu\ Sans\ Mono\ 12
-" endif
-" }}}
 " }}}
