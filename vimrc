@@ -26,8 +26,6 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'jakar/vim-json'
 Bundle 'lunaru/vim-less'
 Bundle 'Elzair/vim-line-numbers'
-Bundle 'nelstrom/vim-markdown-folding'
-Bundle 'plasticboy/vim-markdown'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'myhere/vim-nodejs-complete'
 Bundle 'tpope/vim-rails'
@@ -36,6 +34,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'sjl/vitality.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'plasticboy/vim-markdown'
 " }}}
 " Enable filetype detection
 if has("autocmd")
