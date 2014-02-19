@@ -18,7 +18,7 @@ else
 endif
 " Use Inconsolata font
 if has('macunix')
-  set guifont=Courier\ New:h14
+  set guifont=DejaVu\ Sans\ Mono:h14
   " set guifont=Inconsolata:h15
 else
   set guifont=Inconsolata\ 12
