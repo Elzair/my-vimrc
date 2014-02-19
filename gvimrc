@@ -44,12 +44,10 @@ autocmd vimenter * if !argc() | NERDTree | endif
 " }}}
 " Settings for Specific Files {{{
 " Markdown {{{
-augroup filetype_md
-  if has('macunix')
-    autocmd FileType markdown setlocal guifont=DejaVu\ Sans\ Mono:h14
-  else
-    autocmd FileType markdown setlocal guifont=DejaVu\ Sans\ Mono\ 12
-  endif
-augroup end
+if has('macunix')
+  autocmd BufNewFile,BufRead *.md,*.markdown setlocal guifont=DejaVu\ Sans\ Mono:h14
+else
+  autocmd BufNewFile,BufRead *.md,*.markdown setlocal guifont=DejaVu\ Sans\ Mono\ 12
+endif
 " }}}
 " }}}
