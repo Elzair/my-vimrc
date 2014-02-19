@@ -18,9 +18,9 @@ else
 endif
 " Use Inconsolata font
 if has('macunix')
-  set guifont=Inconsolata\ XL:h14
+  set guifont=Inconsolata\ LGC:h14
 else
-  set guifont=Inconsolata\ XL\ 12
+  set guifont=Inconsolata\ LGC\ 12
 endif
 " Disabled scrollbars and unnecessary menu
 set guioptions-=T
