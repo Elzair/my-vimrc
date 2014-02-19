@@ -13,7 +13,7 @@ if has('macunix')
   set lines=32
   set columns=177
 else 
-  set lines=34
+  set lines=26
   set columns=111
 endif
 " Use Inconsolata font
