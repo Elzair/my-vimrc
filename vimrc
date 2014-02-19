@@ -303,6 +303,7 @@ augroup filetype_md
   " Try to make operator-pending mappings
   autocmd BufNewFile,BufRead *.md,*.markdown onoremap ih :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rkvg_"<cr>
   autocmd BufNewFile,BufRead *.md,*.markdown onoremap ah :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rg_vk0"<cr>
+  autocmd Filetype markdown let g:vim_markdown_initial_foldlevel=1
 augroup END
 " }}}
 " Vimscript file settings ------------------ {{{
