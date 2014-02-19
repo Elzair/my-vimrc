@@ -18,8 +18,8 @@ else
 endif
 " Use Inconsolata font
 if has('macunix')
-  set guifont=DejaVu\ Sans\ Mono:h14
-  " set guifont=Inconsolata:h15
+  " set guifont=DejaVu\ Sans\ Mono:h14
+  set guifont=Inconsolata:h15
 else
   set guifont=Inconsolata\ 12
 endif
@@ -42,4 +42,14 @@ let g:nerdtree_tabs_open_on_new_tab=1
 let g:nerdtree_tabs_synchronize_view=1
 autocmd vimenter * if !argc() | NERDTree | endif
 " }}}
-
+" Settings for Specific Files {{{
+" Markdown {{{
+augroup filetype_md
+  if has('macunix')
+    autocmd FileType markdown setlocal guifont=DejaVu\ Sans\ Mono:h14
+  else
+    autocmd FileType markdown setlocal guifont=DejaVu\ Sans\ Mono\ 12
+  endif
+augroup end
+" }}}
+" }}}
