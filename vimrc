@@ -80,6 +80,8 @@ inoremap <c-u> <esc>bviwU<esc>ea
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>gv :vsplit $MYGVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:source $MYGVIMRC<cr>:!cd $HOME/.vim/my-vimrc && cp -f $MYVIMRC vimrc && cp -f $MYGVIMRC gvimrc && git commit -a -m 'Modified .vimrc and/or .gvimrc' && git push<CR>
+" Add binding to quickly get remote changes to .vimrc and .gvimrc
+nnoremap <leader>pv !cd $HOME/.vim/my-vimrc && git pull && cp -f vimrc $MYVIMRC && cp -f gvimrc $MYGVIMRC<cr>:source $MYVIMRC<cr>:source $MYGVIMRC
 " Abbreviations for email, copyright and signature
 iabbrev @@ elzairthesorcerer@gmail.com
 iabbrev ccopy Copyright 2013 Philip Woods, all rights reserved.
