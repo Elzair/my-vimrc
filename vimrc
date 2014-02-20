@@ -46,6 +46,8 @@ let g:languagetool_jar='/usr/local/Cellar/languagetool/2.3/libexec/languagetool-
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+" Set default directory for vim swap files
+set dir=~/.vim/swp
 " Unknown (?)
 set ex
 set secure
