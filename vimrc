@@ -157,7 +157,7 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> eelse else {<cr>}<esc>O
   autocmd FileType javascript inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
-  autocmd FileType javascript inoremap <buffer> tc try {<cr>}<cr>catch (e) {<cr>}<esc>2kO
+  autocmd FileType javascript inoremap <buffer> trca try {<cr>}<cr>catch (e) {<cr>}<esc>2kO
   autocmd FileType javascript inoremap <buffer> afun function() {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> nfun function() {<cr>}<esc>k$3hi
   autocmd FileType javascript inoremap <buffer> vfun var = function() {<cr>};<esc>k$14hi
