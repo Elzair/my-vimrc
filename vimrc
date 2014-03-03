@@ -35,6 +35,7 @@ Bundle 'sjl/vitality.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'kien/ctrlp.vim'
 " }}}
 " Enable filetype detection
 if has("autocmd")
