@@ -36,6 +36,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Elzair/node-script-detection'
 " }}}
 " Enable filetype detection
 if has("autocmd")
