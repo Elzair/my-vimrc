@@ -71,7 +71,7 @@ nnoremap v :set relativenumber<cr>v
 nnoremap V :set relativenumber<cr>V
 nnoremap <C-V> :set relativenumber<cr><C-V>
 " Add mapping in visual mode to unset relativenumber when switching modes
-vnoremap <Esc> :set relativenumber\&<cr><Esc>
+vnoremap <Esc> :set relativenumber!<cr><Esc>
 " Set leader & local leader
 let mapleader = "-"
 let maplocalleader = "\\"
