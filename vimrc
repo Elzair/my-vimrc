@@ -66,12 +66,6 @@ map <ScrollWheelDown> <C-E>
 " Add mapping to exit Insert Mode that is easier
 " on the fingers than <Esc>
 imap ii <Esc>
-" Add mapping to visual commands to set relativenumber for easier selection
-nnoremap v :set relativenumber<cr>v
-nnoremap V :set relativenumber<cr>V
-nnoremap <C-V> :set relativenumber<cr><C-V>
-" Add mapping in visual mode to unset relativenumber when switching modes
-vnoremap <Esc> :set relativenumber<cr><Esc>
 " Set leader & local leader
 let mapleader = "-"
 let maplocalleader = "\\"
