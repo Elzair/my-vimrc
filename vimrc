@@ -143,7 +143,7 @@ vnoremap <Right> <nop>
 " }}}
 " Settings for Specific Files {{{
 " Javascript {{{
-let g:syntastic_javascript_checkers=['jslint']
+let g:syntastic_javascript_checkers=['jshint']
 augroup filetype_js
   autocmd!
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
