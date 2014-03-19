@@ -39,6 +39,7 @@ Bundle 'moll/vim-node'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'brettof86/vim-swigjs'
 " }}}
 " Enable filetype detection
 if has("autocmd")
