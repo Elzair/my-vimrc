@@ -163,9 +163,9 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> trca try {<cr>}<cr>catch (e) {<cr>}<esc>2kO
   autocmd FileType javascript inoremap <buffer> afun function() {<cr>}<esc>k$2hi
-  autocmd FileType javascript inoremap <buffer> agfun function *() {<cr>}<esc>k$2hi
+  autocmd FileType javascript inoremap <buffer> agf function *() {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> nfun function() {<cr>}<esc>k$3hi
-  autocmd FileType javascript inoremap <buffer> ngfun function *() {<cr>}<esc>k$3hi
+  autocmd FileType javascript inoremap <buffer> ngf function *() {<cr>}<esc>k$3hi
   autocmd FileType javascript inoremap <buffer> vfun var = function() {<cr>};<esc>k$14hi
   autocmd FileType javascript inoremap <buffer> efun exports. = function() {<cr>};<esc>k$14hi
   autocmd FileType javascript inoremap <buffer> cfun function() {<cr>});<esc>k$2hi
