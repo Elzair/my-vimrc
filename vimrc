@@ -183,7 +183,7 @@ augroup filetype_js
 augroup END
 " }}}
 " HTML {{{
-let g:syntastic_html_checkers=['tidy']
+let g:syntastic_html_checkers=['validator']
 augroup filetype_html
   autocmd!
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
