@@ -40,6 +40,7 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'brettof86/vim-swigjs'
+Bundle 'othree/html5.vim'
 " }}}
 " Enable filetype detection
 if has("autocmd")
@@ -183,7 +184,6 @@ augroup filetype_js
 augroup END
 " }}}
 " HTML {{{
-let g:syntastic_html_checkers=['validator']
 augroup filetype_html
   autocmd!
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
