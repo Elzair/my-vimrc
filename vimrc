@@ -169,6 +169,7 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> gfun function *() {<cr>}<esc>k$3hi
   autocmd FileType javascript inoremap <buffer> vfun var = function() {<cr>};<esc>k$14hi
   autocmd FileType javascript inoremap <buffer> efun exports. = function() {<cr>};<esc>k$14hi
+  autocmd FileType javascript inoremap <buffer> egfun exports. = function *() {<cr>};<esc>k$16hi
   autocmd FileType javascript inoremap <buffer> cfun function() {<cr>});<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> funmod (function() {<cr>}());<esc>O<esc>0i<Space>
   autocmd FileType javascript inoremap <buffer> ddef define([], function() {<cr>});<esc>k$14hi
