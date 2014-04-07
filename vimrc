@@ -154,7 +154,7 @@ augroup filetype_js
   autocmd FileType javascript set number
   autocmd FileType javascript set ruler
   autocmd FileType javascript nnoremap <buffer> <localleader>c ^I//<esc>
-  autocmd FileType javascript vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
+  autocmd FileType javascript vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>2la*/<esc>
   autocmd FileType javascript inoremap <buffer> iff if () {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
