@@ -192,6 +192,8 @@ augroup filetype_html
   autocmd FileType html setlocal number
   autocmd FileType html setlocal ruler
   autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
+  autocmd FileType html nnoremap <buffer> <localleader>c ^I<!--<esc>$a--><esc>
+  autocmd FileType html vnoremap <buffer> <localleader>c <esc>`>a--><esc>`<i<!--<esc>
 augroup END
 " }}}
 " CSS {{{
