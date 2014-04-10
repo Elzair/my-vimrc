@@ -206,8 +206,8 @@ augroup filetype_swigjs
   autocmd FileType swigjs setlocal number
   autocmd FileType swigjs setlocal ruler
   autocmd FileType swigjs nnoremap <buffer> <localleader>f Vatzf
-  autocmd FileType swigjs nnoremap <buffer> <localleader>c ^I<!--<esc>$a--><esc>
-  autocmd FileType swigjs vnoremap <buffer> <localleader>c <esc>`>a--><esc>`<i<!--<esc>
+  autocmd FileType swigjs nnoremap <buffer> <leader>c ^I<!--<esc>$a--><esc>
+  autocmd FileType swigjs vnoremap <buffer> <leader>c <esc>`>a--><esc>`<i<!--<esc>
 augroup END
 " }}}
 " CSS {{{
