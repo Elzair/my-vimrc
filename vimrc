@@ -185,15 +185,29 @@ augroup END
 " HTML {{{
 augroup filetype_html
   autocmd!
-  autocmd FileType html,swigjs set omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType html,swigjs setlocal expandtab
-  autocmd FileType html,swigjs setlocal shiftwidth=2
-  autocmd FileType html,swigjs setlocal softtabstop=2
-  autocmd FileType html,swigjs setlocal number
-  autocmd FileType html,swigjs setlocal ruler
-  autocmd FileType html,swigjs nnoremap <buffer> <localleader>f Vatzf
-  autocmd FileType html,swigjs nnoremap <buffer> <localleader>c ^I<!--<esc>$a--><esc>
-  autocmd FileType html,swigjs vnoremap <buffer> <localleader>c <esc>`>a--><esc>`<i<!--<esc>
+  autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType html setlocal expandtab
+  autocmd FileType html setlocal shiftwidth=2
+  autocmd FileType html setlocal softtabstop=2
+  autocmd FileType html setlocal number
+  autocmd FileType html setlocal ruler
+  autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
+  autocmd FileType html nnoremap <buffer> <localleader>c ^I<!--<esc>$a--><esc>
+  autocmd FileType html vnoremap <buffer> <localleader>c <esc>`>a--><esc>`<i<!--<esc>
+augroup END
+" }}}
+" SWIG {{{
+augroup filetype_swigjs
+  autocmd!
+  autocmd FileType swigjs set omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType swigjs setlocal expandtab
+  autocmd FileType swigjs setlocal shiftwidth=2
+  autocmd FileType swigjs setlocal softtabstop=2
+  autocmd FileType swigjs setlocal number
+  autocmd FileType swigjs setlocal ruler
+  autocmd FileType swigjs nnoremap <buffer> <localleader>f Vatzf
+  autocmd FileType swigjs nnoremap <buffer> <localleader>c ^I<!--<esc>$a--><esc>
+  autocmd FileType swigjs vnoremap <buffer> <localleader>c <esc>`>a--><esc>`<i<!--<esc>
 augroup END
 " }}}
 " CSS {{{
