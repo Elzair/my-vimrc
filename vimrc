@@ -41,6 +41,7 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'brettof86/vim-swigjs'
 Bundle 'othree/html5.vim'
+Bundle 'fatih/vim-go'
 " }}}
 " Enable filetype detection
 if has("autocmd")
