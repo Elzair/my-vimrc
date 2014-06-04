@@ -4,44 +4,47 @@ set nocompatible
 " Vundle ---------------- {{{
 " Install vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/neobundle.vim
+call neobundle#begin(expand('~/.vim/bundle/'))
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
 " List other bundles here
-Bundle 'vim-scripts/LanguageTool'
-Bundle 'Valloric/MatchTagAlways'
-Bundle 'scrooloose/nerdtree'
-Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-bundler'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'hiukkanen/vim-hamlc'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'jakar/vim-json'
-Bundle 'lunaru/vim-less'
-Bundle 'Elzair/vim-line-numbers'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'ahayman/vim-nodejs-complete'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'wavded/vim-stylus'
-Bundle 'sjl/vitality.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'ekalinin/Dockerfile.vim'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'kien/ctrlp.vim'
-Bundle 'moll/vim-node'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'brettof86/vim-swigjs'
-Bundle 'othree/html5.vim'
-Bundle 'fatih/vim-go'
+NeoBundle 'vim-scripts/LanguageTool'
+NeoBundle 'Valloric/MatchTagAlways'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'puppetlabs/puppet-syntax-vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'hiukkanen/vim-hamlc'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'jakar/vim-json'
+NeoBundle 'lunaru/vim-less'
+NeoBundle 'Elzair/vim-line-numbers'
+NeoBundle 'jistr/vim-nerdtree-tabs'
+NeoBundle 'ahayman/vim-nodejs-complete'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'wavded/vim-stylus'
+NeoBundle 'sjl/vitality.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'moll/vim-node'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'brettof86/vim-swigjs'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'fatih/vim-go'
+call neobundle#end()
+" Prompt user to install any uninstalled bundles
+NeoBundleCheck
 " }}}
 " Enable filetype detection
 if has("autocmd")
