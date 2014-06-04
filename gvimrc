@@ -9,13 +9,7 @@ syntax on
 set background=dark
 colorscheme solarized
 " Set default width & height
-if has('macunix')
-  set lines=26
-  set columns=177
-else 
-  set lines=26
-  set columns=111
-endif
+so $HOME/.gvim_dim
 " Use Inconsolata font
 if has('macunix')
   set guifont=Inconsolata\ LGC:h14
