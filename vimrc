@@ -1,4 +1,4 @@
-" Basic Settings ------------------- {{{
+" Basic Settings {{{
 " Disable vi compatibility
 set nocompatible
 " Vundle ---------------- {{{
@@ -62,10 +62,10 @@ set dir=~/.vim/swp
 set ex
 set secure
 " }}}
-" GUI Settings ----------------- {{{
+" GUI Settings {{{
 " See gvimrc
 " }}}
-" General Mappings ------------- {{{
+" General Mappings {{{
 " Enable scroll wheel support
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
@@ -276,7 +276,7 @@ augroup filetype_php
   autocmd FileType javascript inoremap <buffer> " ""<esc>i
 augroup END  
 " }}}
-" Ruby -------------------------- {{{
+" Ruby {{{
   autocmd!
   " autocmd FileType ruby,eruby set omnifunc=ruby,erubycomplete#CompleteRuby
   autocmd FileType ruby,eruby setlocal expandtab
@@ -311,6 +311,9 @@ augroup END
 
 augroup END  
 " }}}
+" Java {{{
+let g:EclimCompletionMethod = 'omnifunc'
+" }}}
 " Markdown {{{
 augroup filetype_md
   autocmd!
@@ -325,7 +328,7 @@ augroup filetype_md
   autocmd Filetype markdown let g:vim_markdown_initial_foldlevel=1
 augroup END
 " }}}
-" Vimscript file settings ------------------ {{{
+" Vimscript file settings {{{
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal expandtab
@@ -338,7 +341,7 @@ augroup filetype_vim
 augroup END
 " }}}
 " }}}
-" Tab completion ------------------ {{{
+" Tab completion {{{
 let g:neocomplcache_enable_at_startup=1
 map <C-F6> :ctags -R --exclude=bin --exclude=.git .<CR>
 map <F8> :TagbarToggle<CR>
