@@ -133,7 +133,7 @@ nnoremap <leader>sp :setlocal spell! spelllang=en_us<CR>
 " Add mapping to call LanguageTool's grammar checker
 nnoremap <leader>gr :LanguageToolCheck<CR>
 " Add mapping to open previous buffer in a vsplit
-nnoremap <leader>ns execute "rightbelow vsplit " . bufname("#")
+nnoremap <leader>ns :execute "rightbelow vsplit " . bufname("#")<CR>
 " Disable Arrow Keys
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
