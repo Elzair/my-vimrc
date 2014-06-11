@@ -58,6 +58,9 @@ set shiftwidth=2
 set softtabstop=2
 " Set default directory for vim swap files
 set dir=~/.vim/swp
+" Set default directory for preserving undo history
+set undofile
+set undodir=~/.vim/undo
 " Unknown (?)
 set ex
 set secure
