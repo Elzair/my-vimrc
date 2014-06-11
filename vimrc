@@ -134,6 +134,8 @@ nnoremap <leader>sp :setlocal spell! spelllang=en_us<CR>
 nnoremap <leader>gr :LanguageToolCheck<CR>
 " Add mapping to open previous buffer in a vsplit
 nnoremap <leader>ns :execute "rightbelow vsplit " . bufname("#")<CR>
+" Add mapping to delete two lines but allow them to be undone separately
+nnoremap <leader>d dddd
 " Disable Arrow Keys
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
