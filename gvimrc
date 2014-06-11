@@ -23,8 +23,8 @@ set guioptions-=r
 " }}}
 " Mouse Settings ------------------------------- {{{
 " Enable focus follows mouse
-" let &mouse=a
-let &mousefocus=1
+set mouse=a
+set mousefocus
 " }}}
 " NERDTree Settings ---------------------------- {{{
 " Start NERDTree on startup
