@@ -1,6 +1,6 @@
 " Basic Settings {{{
 " Disable vi compatibility
-let &compatible = 0
+set nocompatible
 " Vundle ---------------- {{{
 " Install vundle
 filetype off
@@ -53,14 +53,14 @@ endif
 " Set grammar rules
 let g:languagetool_jar='/usr/local/Cellar/languagetool/2.3/libexec/languagetool-commandline.jar'
 " Set default tab behavior
-let &expandtab = 1
-let &shiftwidth=2
-let &softtabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 " Set default directory for vim swap files
 set dir=~/.vim/swp
 " Unknown (?)
-let &ex = 1
-let &secure = 1
+set ex
+set secure
 " }}}
 " GUI Settings {{{
 " See gvimrc
@@ -152,11 +152,11 @@ let g:syntastic_javascript_checkers=['jshint']
 augroup filetype_js
   autocmd!
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType javascript let &l:expandtab=1
-  autocmd FileType javascript let &l:shiftwidth=2
-  autocmd FileType javascript let &l:softtabstop=2
-  autocmd FileType javascript let &l:number=1
-  autocmd FileType javascript let &l:ruler=1
+  autocmd FileType javascript setlocal expandtab
+  autocmd FileType javascript setlocal shiftwidth=2
+  autocmd FileType javascript setlocal softtabstop=2
+  autocmd FileType javascript setlocal number
+  autocmd FileType javascript setlocal ruler
   autocmd FileType javascript nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType javascript vnoremap <buffer> <localleader>c <esc>`>a*/<esc>`<i/*<esc>
   autocmd FileType javascript inoremap <buffer> iff if () {<cr>}<esc>k$2hi
@@ -190,11 +190,11 @@ augroup END
 augroup filetype_html
   autocmd!
   autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType html let &l:expandtab=1
-  autocmd FileType html let &l:shiftwidth=2
-  autocmd FileType html let &l:softtabstop=2
-  autocmd FileType html let &l:number=1
-  autocmd FileType html let &l:ruler=1
+  autocmd FileType html setlocal expandtab
+  autocmd FileType html setlocal shiftwidth=2
+  autocmd FileType html setlocal softtabstop=2
+  autocmd FileType html setlocal number
+  autocmd FileType html setlocal ruler
   autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
   " autocmd FileType html nnoremap <buffer> <localleader>c ^I<!--<esc>$a--><esc>
   " autocmd FileType html vnoremap <buffer> <localleader>c <esc>`>a--><esc>`<i<!--<esc>
@@ -204,33 +204,33 @@ augroup END
 augroup filetype_css
   autocmd!
   autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-  autocmd FileType css let &l:expandtab=1
-  autocmd FileType css let &l:shiftwidth=2
-  autocmd FileType css let &l:softtabstop=2
-  autocmd FileType css let &l:number=1
-  autocmd FileType css let &l:ruler=1
+  autocmd FileType css setlocal expandtab
+  autocmd FileType css setlocal shiftwidth=2
+  autocmd FileType css setlocal softtabstop=2
+  autocmd FileType css setlocal number
+  autocmd FileType css setlocal ruler
 augroup END  
 " }}}
 " XML {{{
 augroup filetype_xml
   autocmd!
   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType xml let &l:expandtab=1
-  autocmd FileType xml let &l:shiftwidth=2
-  autocmd FileType xml let &l:softtabstop=2
-  autocmd FileType xml let &l:number=1
-  autocmd FileType xml let &l:ruler=1
+  autocmd FileType xml setlocal expandtab
+  autocmd FileType xml setlocal shiftwidth=2
+  autocmd FileType xml setlocal softtabstop=2
+  autocmd FileType xml setlocal number
+  autocmd FileType xml setlocal ruler
 augroup end
 " }}}
 " C {{{
 augroup filetype_c
   autocmd!
   autocmd FileType c set omnifunc=ccomplete#Complete
-  autocmd FileType c let &l:expandtab=1
-  autocmd FileType c let &l:shiftwidth=2
-  autocmd FileType c let &l:softtabstop=2
-  autocmd FileType c let &l:number=1
-  autocmd FileType c let &l:ruler=1
+  autocmd FileType c setlocal expandtab
+  autocmd FileType c setlocal shiftwidth=2
+  autocmd FileType c setlocal softtabstop=2
+  autocmd FileType c setlocal number
+  autocmd FileType c setlocal ruler
   autocmd FileType c nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType c vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
 augroup END
@@ -239,11 +239,11 @@ augroup END
 augroup filetype_py
   autocmd!
   autocmd FileType python set omnifunc=pythoncomplete#Complete
-  autocmd FileType python let &l:expandtab=1
-  autocmd FileType python let &l:shiftwidth=2
-  autocmd FileType python let &l:softtabstop=2
-  autocmd FileType python let &l:number=1
-  autocmd FileType python let &l:ruler=1
+  autocmd FileType python setlocal expandtab
+  autocmd FileType python setlocal shiftwidth=2
+  autocmd FileType python setlocal softtabstop=2
+  autocmd FileType python setlocal number
+  autocmd FileType python setlocal ruler
   autocmd FileType python iabbrev iff if :<esc>hi
   autocmd FileType python nnoremap <buffer> <localleader>c ^I#<esc>
 augroup END
@@ -252,11 +252,11 @@ augroup END
 augroup filetype_php
   autocmd!
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-  autocmd FileType php let &l:expandtab=1
-  autocmd FileType php let &l:shiftwidth=2
-  autocmd FileType php let &l:softtabstop=2
-  autocmd FileType php let &l:number=1
-  autocmd FileType php let &l:ruler=1
+  autocmd FileType php setlocal expandtab
+  autocmd FileType php setlocal shiftwidth=2
+  autocmd FileType php setlocal softtabstop=2
+  autocmd FileType php setlocal number
+  autocmd FileType php setlocal ruler
   autocmd FileType php nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType php vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
   autocmd FileType php inoremap <buffer> iff if () {<cr>}<esc>k$2hi
@@ -279,11 +279,11 @@ augroup END
 " Ruby {{{
   autocmd!
   " autocmd FileType ruby,eruby set omnifunc=ruby,erubycomplete#CompleteRuby
-  autocmd FileType ruby,eruby let &l:expandtab=1
-  autocmd FileType ruby,eruby let &l:shiftwidth=2
-  autocmd FileType ruby,eruby let &l:softtabstop=2
-  autocmd FileType ruby,eruby let &l:number=1
-  autocmd FileType ruby,eruby let &l:ruler=1
+  autocmd FileType ruby,eruby setlocal expandtab
+  autocmd FileType ruby,eruby setlocal shiftwidth=2
+  autocmd FileType ruby,eruby setlocal softtabstop=2
+  autocmd FileType ruby,eruby setlocal number
+  autocmd FileType ruby,eruby setlocal ruler
   autocmd FileType ruby,eruby nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType ruby,eruby vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
   autocmd FileType ruby,eruby inoremap <buffer> iff if <cr>end<esc>k$a
@@ -317,11 +317,11 @@ let g:EclimCompletionMethod = 'omnifunc'
 " Markdown {{{
 augroup filetype_md
   autocmd!
-  autocmd FileType markdown let &l:expandtab=1
-  autocmd FileType markdown let &l:shiftwidth=2
-  autocmd FileType markdown let &l:softtabstop=2
-  autocmd FileType markdown let &l:number=1
-  autocmd FileType markdown let &l:ruler=1
+  autocmd FileType markdown setlocal expandtab
+  autocmd FileType markdown setlocal shiftwidth=2
+  autocmd FileType markdown setlocal softtabstop=2
+  autocmd FileType markdown setlocal number
+  autocmd FileType markdown setlocal ruler
   " Try to make operator-pending mappings
   autocmd BufNewFile,BufRead *.md,*.markdown onoremap ih :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rkvg_"<cr>
   autocmd BufNewFile,BufRead *.md,*.markdown onoremap ah :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rg_vk0"<cr>
@@ -331,11 +331,11 @@ augroup END
 " Vimscript file settings {{{
 augroup filetype_vim
   autocmd!
-  autocmd FileType vim let &l:expandtab=1
-  autocmd FileType vim let &l:shiftwidth=2
-  autocmd FileType vim let &l:softtabstop=2
-  autocmd FileType vim let &l:number=1
-  autocmd FileType vim let &l:ruler=1
+  autocmd FileType vim setlocal expandtab
+  autocmd FileType vim setlocal shiftwidth=2
+  autocmd FileType vim setlocal softtabstop=2
+  autocmd FileType vim setlocal number
+  autocmd FileType vim setlocal ruler
   " Enable code folding for vimscript files
   autocmd FileType vim setlocal foldmethod=marker 
 augroup END
