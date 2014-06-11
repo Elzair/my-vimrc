@@ -185,12 +185,15 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> funmod (function() {<cr>}());<esc>O<esc>0i<Space>
   autocmd FileType javascript inoremap <buffer> ddef define([], function() {<cr>});<esc>k$14hi
   autocmd FileType javascript iabbrev  <buffer> rret return;<esc>i
+  " Mapping to insert semicolon at end of line
+  autocmd FileType javascript inoremap <buffer> <localleader>; <esc>:execute "normal! mqA;\<esc>`q"
   " Add support for automatically adding brackets
   autocmd FileType javascript inoremap <buffer> ( ()<esc>i
   autocmd FileType javascript inoremap <buffer> { {}<esc>i
   autocmd FileType javascript inoremap <buffer> [ []<esc>i
   autocmd FileType javascript inoremap <buffer> ' ''<esc>i
   autocmd FileType javascript inoremap <buffer> " ""<esc>i
+  
 augroup END
 " }}}
 " HTML {{{
