@@ -1,6 +1,6 @@
 " Basic Settings {{{
 " Disable vi compatibility
-set nocompatible
+let &compatible = 0
 " Vundle ---------------- {{{
 " Install vundle
 filetype off
@@ -53,14 +53,14 @@ endif
 " Set grammar rules
 let g:languagetool_jar='/usr/local/Cellar/languagetool/2.3/libexec/languagetool-commandline.jar'
 " Set default tab behavior
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+let &expandtab = 1
+let &shiftwidth=2
+let &softtabstop=2
 " Set default directory for vim swap files
 set dir=~/.vim/swp
 " Unknown (?)
-set ex
-set secure
+let &ex = 1
+let &secure = 1
 " }}}
 " GUI Settings {{{
 " See gvimrc
@@ -152,11 +152,11 @@ let g:syntastic_javascript_checkers=['jshint']
 augroup filetype_js
   autocmd!
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType javascript set expandtab
-  autocmd FileType javascript set shiftwidth=2
-  autocmd FileType javascript set softtabstop=2
-  autocmd FileType javascript set number
-  autocmd FileType javascript set ruler
+  autocmd FileType javascript let &expandtab=1
+  autocmd FileType javascript let &shiftwidth=2
+  autocmd FileType javascript let &softtabstop=2
+  autocmd FileType javascript let &number=1
+  autocmd FileType javascript let &ruler=1
   autocmd FileType javascript nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType javascript vnoremap <buffer> <localleader>c <esc>`>a*/<esc>`<i/*<esc>
   autocmd FileType javascript inoremap <buffer> iff if () {<cr>}<esc>k$2hi
