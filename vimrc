@@ -42,6 +42,7 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'brettof86/vim-swigjs'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'editorconfig/editorconfig-vim'
 call neobundle#end()
 " Prompt user to install any uninstalled bundles
 NeoBundleCheck
