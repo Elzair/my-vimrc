@@ -59,6 +59,9 @@ set shiftwidth=2
 set softtabstop=2
 " Set default directory for vim swap files
 set dir=~/.vim/swp
+" Set default directory for preserving undo history
+set undofile
+set undodir=~/.vim/undo
 " Unknown (?)
 set ex
 set secure
@@ -133,6 +136,10 @@ nnoremap <2-LeftMouse> za
 nnoremap <leader>sp :setlocal spell! spelllang=en_us<CR>
 " Add mapping to call LanguageTool's grammar checker
 nnoremap <leader>gr :LanguageToolCheck<CR>
+" Add mapping to open previous buffer in a vsplit
+nnoremap <leader>ns :execute "rightbelow vsplit " . bufname("#")<CR>
+" Add mapping to delete two lines but allow them to be undone separately
+nnoremap <leader>d dd:let &undolevels=&undolevels<CR>dd
 " Disable Arrow Keys
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
@@ -153,11 +160,11 @@ let g:syntastic_javascript_checkers=['jshint']
 augroup filetype_js
   autocmd!
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType javascript set expandtab
-  autocmd FileType javascript set shiftwidth=2
-  autocmd FileType javascript set softtabstop=2
-  autocmd FileType javascript set number
-  autocmd FileType javascript set ruler
+  autocmd FileType javascript setlocal expandtab
+  autocmd FileType javascript setlocal shiftwidth=2
+  autocmd FileType javascript setlocal softtabstop=2
+  autocmd FileType javascript setlocal number
+  autocmd FileType javascript setlocal ruler
   autocmd FileType javascript nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType javascript vnoremap <buffer> <localleader>c <esc>`>a*/<esc>`<i/*<esc>
   autocmd FileType javascript inoremap <buffer> iff if () {<cr>}<esc>k$2hi
@@ -179,12 +186,15 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> funmod (function() {<cr>}());<esc>O<esc>0i<Space>
   autocmd FileType javascript inoremap <buffer> ddef define([], function() {<cr>});<esc>k$14hi
   autocmd FileType javascript iabbrev  <buffer> rret return;<esc>i
+  " Mapping to insert semicolon at end of line
+  autocmd FileType javascript inoremap <buffer> <localleader>; <esc>:execute "normal! mqA;\<esc>`q"
   " Add support for automatically adding brackets
   autocmd FileType javascript inoremap <buffer> ( ()<esc>i
   autocmd FileType javascript inoremap <buffer> { {}<esc>i
   autocmd FileType javascript inoremap <buffer> [ []<esc>i
   autocmd FileType javascript inoremap <buffer> ' ''<esc>i
   autocmd FileType javascript inoremap <buffer> " ""<esc>i
+  
 augroup END
 " }}}
 " HTML {{{
