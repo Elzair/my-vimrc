@@ -61,6 +61,8 @@ set dir=~/.vim/swp
 " Set default directory for preserving undo history
 set undofile
 set undodir=~/.vim/undo
+" Keep NERDTree's root directory in sync with Vim's CWD
+let g:NERDTreeChDirMode=2
 " Unknown (?)
 set ex
 set secure
