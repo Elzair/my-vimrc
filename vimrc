@@ -1,8 +1,8 @@
 " Basic Settings {{{
 " Disable vi compatibility
 set nocompatible
-" Vundle ---------------- {{{
-" Install vundle
+" NeoBundle----------------- {{{
+" Install NeoBundle
 filetype off
 set rtp+=~/.vim/bundle/neobundle.vim
 call neobundle#begin(expand('~/.vim/bundle/'))
