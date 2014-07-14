@@ -20,6 +20,7 @@ endif
 set guioptions-=T
 set guioptions-=L
 set guioptions-=r
+set guioptions-=m
 " }}}
 " Mouse Settings ------------------------------- {{{
 " Enable focus follows mouse
