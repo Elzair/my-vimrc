@@ -1,7 +1,7 @@
 " Basic Settings {{{
 " Disable vi compatibility
 set nocompatible
-" NeoBundle----------------- {{{
+" NeoBundle -----------------{{{
 " Install NeoBundle
 filetype off
 set rtp+=~/.vim/bundle/neobundle.vim
@@ -43,6 +43,7 @@ NeoBundle 'brettof86/vim-swigjs'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'wting/rust.vim'
 call neobundle#end()
 " Prompt user to install any uninstalled bundles
 NeoBundleCheck
