@@ -158,6 +158,33 @@ vnoremap <Left> <nop>
 vnoremap <Right> <nop>
 " }}}
 " Settings for Specific Files {{{
+" C {{{
+augroup filetype_c
+  autocmd!
+  autocmd FileType c set omnifunc=ccomplete#Complete
+  autocmd FileType c setlocal expandtab
+  autocmd FileType c setlocal shiftwidth=2
+  autocmd FileType c setlocal softtabstop=2
+  autocmd FileType c setlocal number
+  autocmd FileType c setlocal ruler
+  autocmd FileType c nnoremap <buffer> <localleader>c ^I//<esc>
+  autocmd FileType c vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
+augroup END
+" }}}
+" CSS {{{
+augroup filetype_css
+  autocmd!
+  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css setlocal expandtab
+  autocmd FileType css setlocal shiftwidth=2
+  autocmd FileType css setlocal softtabstop=2
+  autocmd FileType css setlocal number
+  autocmd FileType css setlocal ruler
+augroup END  
+" }}}
+" Java {{{
+let g:EclimCompletionMethod = 'omnifunc'
+" }}}
 " Javascript {{{
 let g:syntastic_javascript_checkers=['jshint']
 augroup filetype_js
@@ -214,52 +241,18 @@ augroup filetype_html
   " autocmd FileType html vnoremap <buffer> <localleader>c <esc>`>a--><esc>`<i<!--<esc>
 augroup END
 " }}}
-" CSS {{{
-augroup filetype_css
+" Markdown {{{
+augroup filetype_md
   autocmd!
-  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-  autocmd FileType css setlocal expandtab
-  autocmd FileType css setlocal shiftwidth=2
-  autocmd FileType css setlocal softtabstop=2
-  autocmd FileType css setlocal number
-  autocmd FileType css setlocal ruler
-augroup END  
-" }}}
-" XML {{{
-augroup filetype_xml
-  autocmd!
-  autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType xml setlocal expandtab
-  autocmd FileType xml setlocal shiftwidth=2
-  autocmd FileType xml setlocal softtabstop=2
-  autocmd FileType xml setlocal number
-  autocmd FileType xml setlocal ruler
-augroup end
-" }}}
-" C {{{
-augroup filetype_c
-  autocmd!
-  autocmd FileType c set omnifunc=ccomplete#Complete
-  autocmd FileType c setlocal expandtab
-  autocmd FileType c setlocal shiftwidth=2
-  autocmd FileType c setlocal softtabstop=2
-  autocmd FileType c setlocal number
-  autocmd FileType c setlocal ruler
-  autocmd FileType c nnoremap <buffer> <localleader>c ^I//<esc>
-  autocmd FileType c vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
-augroup END
-" }}}
-" Python {{{
-augroup filetype_py
-  autocmd!
-  autocmd FileType python set omnifunc=pythoncomplete#Complete
-  autocmd FileType python setlocal expandtab
-  autocmd FileType python setlocal shiftwidth=2
-  autocmd FileType python setlocal softtabstop=2
-  autocmd FileType python setlocal number
-  autocmd FileType python setlocal ruler
-  autocmd FileType python iabbrev iff if :<esc>hi
-  autocmd FileType python nnoremap <buffer> <localleader>c ^I#<esc>
+  autocmd FileType markdown setlocal expandtab
+  autocmd FileType markdown setlocal shiftwidth=2
+  autocmd FileType markdown setlocal softtabstop=2
+  autocmd FileType markdown setlocal number
+  autocmd FileType markdown setlocal ruler
+  " Try to make operator-pending mappings
+  autocmd BufNewFile,BufRead *.md,*.markdown onoremap ih :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rkvg_"<cr>
+  autocmd BufNewFile,BufRead *.md,*.markdown onoremap ah :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rg_vk0"<cr>
+  autocmd Filetype markdown let g:vim_markdown_initial_foldlevel=1
 augroup END
 " }}}
 " PHP {{{
@@ -289,6 +282,19 @@ augroup filetype_php
   autocmd FileType javascript inoremap <buffer> ' ''<esc>i
   autocmd FileType javascript inoremap <buffer> " ""<esc>i
 augroup END  
+" }}}
+" Python {{{
+augroup filetype_py
+  autocmd!
+  autocmd FileType python set omnifunc=pythoncomplete#Complete
+  autocmd FileType python setlocal expandtab
+  autocmd FileType python setlocal shiftwidth=2
+  autocmd FileType python setlocal softtabstop=2
+  autocmd FileType python setlocal number
+  autocmd FileType python setlocal ruler
+  autocmd FileType python iabbrev iff if :<esc>hi
+  autocmd FileType python nnoremap <buffer> <localleader>c ^I#<esc>
+augroup END
 " }}}
 " Ruby {{{
   autocmd!
@@ -322,25 +328,27 @@ augroup END
   autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
   autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
   autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-
 augroup END  
 " }}}
-" Java {{{
-let g:EclimCompletionMethod = 'omnifunc'
-" }}}
-" Markdown {{{
-augroup filetype_md
+" Rust {{{
+augroup filetype_js
   autocmd!
-  autocmd FileType markdown setlocal expandtab
-  autocmd FileType markdown setlocal shiftwidth=2
-  autocmd FileType markdown setlocal softtabstop=2
-  autocmd FileType markdown setlocal number
-  autocmd FileType markdown setlocal ruler
-  " Try to make operator-pending mappings
-  autocmd BufNewFile,BufRead *.md,*.markdown onoremap ih :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rkvg_"<cr>
-  autocmd BufNewFile,BufRead *.md,*.markdown onoremap ah :<c-u>execute "normal! ?^\\(==\\+\\\\|--\\+\\)$\r:nohlsearch\rg_vk0"<cr>
-  autocmd Filetype markdown let g:vim_markdown_initial_foldlevel=1
-augroup END
+  autocmd FileType rust setlocal expandtab
+  autocmd FileType rust setlocal shiftwidth=2
+  autocmd FileType rust setlocal softtabstop=2
+  autocmd FileType rust setlocal number
+  autocmd FileType rust setlocal ruler
+  " autocmd FileType rust inoremap <buffer> iff if () {<cr>}<esc>k$2hi
+  " autocmd FileType rust inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
+  " autocmd FileType rust inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
+  " autocmd FileType rust inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
+  " autocmd FileType rust inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
+  " autocmd FileType rust inoremap <buffer> eelse else {<cr>}<esc>O
+  " autocmd FileType rust inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
+  " autocmd FileType rust inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
+  autocmd FileType rust inoremap <buffer> ffn fn () {<cr>}<esc>k$3hi
+  autocmd FileType rust inoremap <buffer> rfn fn () -> {<cr>return ;<cr>}<esc>2k$5hi
+augroup end
 " }}}
 " Vimscript file settings {{{
 augroup filetype_vim
@@ -353,6 +361,17 @@ augroup filetype_vim
   " Enable code folding for vimscript files
   autocmd FileType vim setlocal foldmethod=marker 
 augroup END
+" }}}
+" XML {{{
+augroup filetype_xml
+  autocmd!
+  autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType xml setlocal expandtab
+  autocmd FileType xml setlocal shiftwidth=2
+  autocmd FileType xml setlocal softtabstop=2
+  autocmd FileType xml setlocal number
+  autocmd FileType xml setlocal ruler
+augroup end
 " }}}
 " }}}
 " Tab completion {{{
