@@ -330,21 +330,21 @@ augroup END
 augroup END  
 " }}}
 " Rust {{{
-augroup filetype_js
+augroup filetype_rust
   autocmd!
   autocmd FileType rust setlocal expandtab
   autocmd FileType rust setlocal shiftwidth=2
   autocmd FileType rust setlocal softtabstop=2
   autocmd FileType rust setlocal number
   autocmd FileType rust setlocal ruler
-  " autocmd FileType rust inoremap <buffer> iff if () {<cr>}<esc>k$2hi
-  " autocmd FileType rust inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
-  " autocmd FileType rust inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
-  " autocmd FileType rust inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
-  " autocmd FileType rust inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
-  " autocmd FileType rust inoremap <buffer> eelse else {<cr>}<esc>O
-  " autocmd FileType rust inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
-  " autocmd FileType rust inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
+  autocmd FileType rust inoremap <buffer> iff if  {<cr>}<esc>k$hi
+  autocmd FileType rust inoremap <buffer> elif else if  {<cr>}<esc>k$hi
+  autocmd FileType rust inoremap <buffer> ifelif if  {<cr>}<cr>else if  {<cr>}<esc>3k$hi
+  autocmd FileType rust inoremap <buffer> ifelse if  {<cr>}<cr>else {<cr>}<esc>3k$hi
+  autocmd FileType rust inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
+  autocmd FileType rust inoremap <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType rust inoremap <buffer> ffor for  {<cr>}<esc>k$hi
+  autocmd FileType rust inoremap <buffer> wwhile while  {<cr>}<esc>k$hi
   autocmd FileType rust inoremap <buffer> ffn fn () {<cr>}<esc>k$3hi
   autocmd FileType rust inoremap <buffer> rfn fn () -> {<cr>return ;<cr>}<esc>2k$6hi
   autocmd FileType rust inoremap <buffer> ( ()<esc>i
