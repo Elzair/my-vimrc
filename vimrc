@@ -347,7 +347,7 @@ augroup filetype_js
   " autocmd FileType rust inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
   " autocmd FileType rust inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
   autocmd FileType rust inoremap <buffer> ffn fn () {<cr>}<esc>k$3hi
-  autocmd FileType rust inoremap <buffer> rfn fn () -> {<cr>return ;<cr>}<esc>2k$5hi
+  autocmd FileType rust inoremap <buffer> rfn fn () -> {<cr>return ;<cr>}<esc>2k$6hi
 augroup end
 " }}}
 " Vimscript file settings {{{
