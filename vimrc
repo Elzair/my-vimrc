@@ -389,7 +389,7 @@ augroup filetype_lp
   autocmd FileType lp setlocal number
   autocmd FileType lp setlocal ruler
   autocmd FileType lp inoremap <buffer> sco [CODE]<cr>[/CODE]<Esc>O
-  autocmd FileType lp inoremap <buffer> fco [/CODE]<cr><cr>[CODE]<Esc>kO
+  autocmd FileType lp inoremap <buffer> fco [/CODE]<cr><cr><cr>[CODE]<Esc>kO
 augroup end
 " }}}
 " }}}
