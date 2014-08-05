@@ -45,6 +45,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'wting/rust.vim'
 NeoBundle 'elzair/ifm-vim'
+NeoBundle 'sk1418/Join'
 call neobundle#end()
 " Prompt user to install any uninstalled bundles
 NeoBundleCheck
