@@ -33,7 +33,9 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'wting/rust.vim'
+NeoBundle 'elzair/ifm-vim'
 NeoBundle 'sk1418/Join'
+NeoBundle 'elzair/lp-vim'
 call neobundle#end()
 " Prompt user to install any uninstalled bundles
 NeoBundleCheck
@@ -369,6 +371,18 @@ augroup filetype_xml
   autocmd FileType xml setlocal softtabstop=2
   autocmd FileType xml setlocal number
   autocmd FileType xml setlocal ruler
+augroup end
+" }}}
+" LP {{{
+augroup filetype_lp
+  autocmd!
+  autocmd FileType lp setlocal expandtab
+  autocmd FileType lp setlocal shiftwidth=2
+  autocmd FileType lp setlocal softtabstop=2
+  autocmd FileType lp setlocal number
+  autocmd FileType lp setlocal ruler
+  autocmd FileType lp inoremap <buffer> sco [CODE]<cr>[/CODE]<Esc>O
+  autocmd FileType lp inoremap <buffer> fco [/CODE]<cr><cr><cr>[CODE]<Esc>kO
 augroup end
 " }}}
 " }}}
