@@ -9,34 +9,23 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 " List other bundles here
-NeoBundle 'vim-scripts/LanguageTool'
 NeoBundle 'Valloric/MatchTagAlways'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'puppetlabs/puppet-syntax-vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'tpope/vim-bundler'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'hiukkanen/vim-hamlc'
-NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'jakar/vim-json'
-NeoBundle 'lunaru/vim-less'
 NeoBundle 'Elzair/vim-line-numbers'
 NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'ahayman/vim-nodejs-complete'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'wavded/vim-stylus'
-NeoBundle 'sjl/vitality.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'moll/vim-node'
 NeoBundle 'jelera/vim-javascript-syntax'
+" NeoBundle 'ahayman/vim-nodejs-complete'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'brettof86/vim-swigjs'
@@ -196,6 +185,10 @@ augroup filetype_js
   autocmd FileType javascript setlocal softtabstop=2
   autocmd FileType javascript setlocal number
   autocmd FileType javascript setlocal ruler
+  " Support Jetbrains Code Folding
+  autocmd FileType javascript setlocal foldmethod=marker
+  autocmd FileType javascript setlocal foldmarker=<editor-fold,</editor-fold>
+  " Shortcuts
   autocmd FileType javascript nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType javascript vnoremap <buffer> <localleader>c <esc>`>a*/<esc>`<i/*<esc>
   autocmd FileType javascript inoremap <buffer> iff if () {<cr>}<esc>k$2hi
@@ -209,7 +202,7 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> trca try {<cr>}<cr>catch (e) {<cr>}<esc>2kO
   autocmd FileType javascript inoremap <buffer> afun function() {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> gafun function *() {<cr>}<esc>k$2hi
-  autocmd FileType javascript inoremap <buffer> nfun function() {<cr>}<esc>k$3hi
+  autocmd FileType javascript inoremap <buffer> nfun function () {<cr>}<esc>k$3hi
   autocmd FileType javascript inoremap <buffer> gfun function *() {<cr>}<esc>k$3hi
   autocmd FileType javascript inoremap <buffer> vfun var = function() {<cr>};<esc>k$14hi
   autocmd FileType javascript inoremap <buffer> efun exports. = function() {<cr>};<esc>k$14hi
