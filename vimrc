@@ -135,6 +135,8 @@ nnoremap <leader>gr :LanguageToolCheck<CR>
 nnoremap <leader>ns :execute "rightbelow vsplit " . bufname("#")<CR>
 " Add mapping to delete two lines but allow them to be undone separately
 nnoremap <leader>d dd:let &undolevels=&undolevels<CR>dd
+" Add mapping to create new tab
+nnoremap <leader>t :tabnew
 " Disable Arrow Keys
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
