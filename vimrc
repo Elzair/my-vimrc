@@ -176,6 +176,12 @@ augroup filetype_css
   autocmd FileType css setlocal ruler
 augroup END  
 " }}}
+" GYP {{{
+augroup filet
+  autocmd!
+  autocmd BufNewFile,BufRead *.gyp set syntax=json
+augroup end
+" }}}
 " Java {{{
 let g:EclimCompletionMethod = 'omnifunc'
 " }}}
@@ -208,7 +214,7 @@ augroup filetype_js
   autocmd FileType javascript inoremap <buffer> gafun function *() {<cr>}<esc>k$2hi
   autocmd FileType javascript inoremap <buffer> nfun function () {<cr>}<esc>k$3hi
   autocmd FileType javascript inoremap <buffer> gfun function *() {<cr>}<esc>k$3hi
-  autocmd FileType javascript inoremap <buffer> vfun var = function() {<cr>};<esc>k$14hi
+  autocmd FileType javascript inoremap <buffer> vfun var  = function() {<cr>};<esc>k$14hi
   autocmd FileType javascript inoremap <buffer> efun exports. = function() {<cr>};<esc>k$14hi
   autocmd FileType javascript inoremap <buffer> gefun exports. = function *() {<cr>};<esc>k$16hi
   autocmd FileType javascript inoremap <buffer> funmod (function() {<cr>}());<esc>O<esc>0i<Space>
