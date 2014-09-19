@@ -72,7 +72,7 @@ map <ScrollWheelDown> <C-E>
 " on the fingers than <Esc>
 imap ii <Esc>
 " Add mapping to jump one character in insert mode
-imap jj <Esc>2li
+imap jj <Esc>la
 " Set leader & local leader
 let mapleader = "-"
 let maplocalleader = "\\"
