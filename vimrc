@@ -71,6 +71,8 @@ map <ScrollWheelDown> <C-E>
 " Add mapping to exit Insert Mode that is easier
 " on the fingers than <Esc>
 imap ii <Esc>
+" Add mapping to jump one character in insert mode
+imap jj <Esc>li
 " Set leader & local leader
 let mapleader = "-"
 let maplocalleader = "\\"
@@ -163,8 +165,40 @@ augroup filetype_c
   autocmd FileType c setlocal ruler
   autocmd FileType c nnoremap <buffer> <localleader>c ^I//<esc>
   autocmd FileType c vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
+  autocmd FileType c inoremap <buffer> iff if () {<cr>}<esc>k$2hi
+  autocmd FileType c inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
+  autocmd FileType c inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
+  autocmd FileType c inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
+  autocmd FileType c inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
+  autocmd FileType c inoremap <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType c inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
+  autocmd FileType c inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
+  autocmd FileType c inoremap <buffer> main void main(int argc, char **argv) {<cr>}<esc>O
 augroup END
 " }}}
+" C++ {{{
+augroup filetype_cpp
+  autocmd!
+  autocmd FileType cpp set omnifunc=ccomplete#Complete
+  autocmd FileType cpp setlocal expandtab
+  autocmd FileType cpp setlocal shiftwidth=2
+  autocmd FileType cpp setlocal softtabstop=2
+  autocmd FileType cpp setlocal number
+  autocmd FileType cpp setlocal ruler
+  autocmd FileType cpp nnoremap <buffer> <localleader>c ^I//<esc>
+  autocmd FileType cpp vnoremap <buffer> <localleader>c <esc>`<i/*<esc>`>a*/<esc>
+  autocmd FileType cpp inoremap <buffer> iff if () {<cr>}<esc>k$2hi
+  autocmd FileType cpp inoremap <buffer> elif else if () {<cr>}<esc>k$2hi
+  autocmd FileType cpp inoremap <buffer> ifelif if () {<cr>}<cr>else if () {<cr>}<esc>3k$2hi
+  autocmd FileType cpp inoremap <buffer> ifelse if () {<cr>}<cr>else {<cr>}<esc>3k$2hi
+  autocmd FileType cpp inoremap <buffer> ifeiel if () {<cr>}<cr>else if () {<cr>}<cr>else {<cr>}<esc>5k$2hi
+  autocmd FileType cpp inoremap <buffer> eelse else {<cr>}<esc>O
+  autocmd FileType cpp inoremap <buffer> ffor for () {<cr>}<esc>k$2hi
+  autocmd FileType cpp inoremap <buffer> wwhile while () {<cr>}<esc>k$2hi
+  autocmd FileType cpp inoremap <buffer> main int main(int argc, char **argv) {<cr>}<esc>O
+augroup END
+" }}}
+
 " CSS {{{
 augroup filetype_css
   autocmd!
